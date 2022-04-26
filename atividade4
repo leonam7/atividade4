@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+    <script>
+        function calcular (){
+            var nome_aluno=media.nome.value;
+            var disc_nome=media.disciplina.value;
+            var nota_1=media.nota1.value;
+            var nota_2=media.nota2.value;
+
+            var calc_media=parseFloat(nota_1)+parseFloat(nota_2)/2;
+            if (calc_media<=3){
+                alert (nome_aluno+" Você foi reprovado em "+disc_nome+" com média "+calc_media);
+            } else if (calc_media>=7){
+                alert (nome_aluno+" Você foi aprovado em "+disc_nome+" com média "+calc_media);
+            }
+            else {
+                alert (nome_aluno+" Você está de recuperação em "+disc_nome+" com média "+calc_media);
+            }
+        }
+    </script>
+<body>
+    <form name="media" action="">
+        <h1>Calcule sua média</h1>
+        <label for="">Nome</label>
+        <input name="nome" type="text"><br><br>
+        <label for="">Disciplina</label>
+        <input name="disciplina" type="text"><br><br>
+        <label for="">Nota 1</label>
+        <input name="nota1" type="text"><br><br>
+        <label for="">Nota 2</label>
+        <input name="nota2" type="text"><br><br>
+
+        <input type="button" value="Calcular" onclick="calcular()"><br>
+    </form>
+</body>
+</html>
